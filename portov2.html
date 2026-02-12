@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Juliyah Sapnah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <style>
+        /* --- CSS STYLING --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #5a5a5a;
+            background-color: #fdfaf6; /* Cream Pastel */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .split {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #8da9a9; /* Soft Sage */
+            margin: 0 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e5b3b3; /* Soft Rose */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2f1 0%, #fce4ec 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 6px solid #ffffff;
+            margin-bottom: 25px;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-text h1 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #8da9a9;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #4a4a4a;
+            line-height: 1.1;
+        }
+
+        .hero-text h2 span {
+            color: #d4a373; /* Muted Gold */
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #7a7a7a;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        /* About & Software */
+        .about-software {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+
+        .about { flex: 2; min-width: 300px; }
+        .software { flex: 1; min-width: 250px; }
+
+        h3 {
+            margin-bottom: 25px;
+            color: #6a8e8e;
+            font-size: 1.5rem;
+            display: inline-block;
+            border-bottom: 3px solid #fce4ec;
+        }
+
+        .circle-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .circle {
+            width: 55px;
+            height: 55px;
+            background-color: #f1f8f7;
+            border-radius: 12px; /* Rounded box style */
+            border: 2px solid #e0f2f1;
+            transition: all 0.3s ease;
+        }
+
+        .circle:hover {
+            transform: translateY(-5px);
+            background-color: #e5b3b3;
+            border-color: #e5b3b3;
+        }
+
+        /* Project Section */
+        .projects {
+            padding: 80px 0;
+            background-color: #f9fbfb;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .project-card img {
+            display: block;
+            transition: 0.5s;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #ffffff;
+            padding: 80px 0 30px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .social-media { flex: 1; }
+        .contact-info { flex: 1; }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info strong {
+            color: #8da9a9;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #b0b0b0;
+            padding-top: 20px;
+            border-top: 1px solid #f5f5f5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-text h2 { font-size: 2.5rem; }
+            .split { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Tentang Saya</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/180" alt="Juliyah Sapnah Illustration" />
+            </div>
+            <div class="hero-text">
+                <h1>Portofolio</h1>
+                <h2><span>juliyah</span>sapnah</h2>
+                <p>Freelance Web Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-software">
+        <div class="container split">
+            <div class="about">
+                <h3>Tentang Saya</h3>
+                <p>
+                    Saya adalah seorang profesional di bidang Web Development dengan pengalaman lebih dari 2 tahun. Memiliki keahlian utama dalam HTML, CSS, JavaScript, dan UI/UX. Saya berkomitmen menghadirkan solusi kreatif dan efisien di setiap
+                    proyek.
+                </p>
+            </div>
+            <div class="software">
+                <h3>Software</h3>
+                <div class="circle-group">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h3>Project Saya</h3>
+            <div class="project-grid">
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/e0f2f1/555?text=Frontend" alt="Project" width="100%" /></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/fce4ec/555?text=Backend" alt="Project" width="100%" /></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/fff9c4/555?text=Logo" alt="Project" width="100%" /></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/e8f5e9/555?text=Web+App" alt="Project" width="100%" /></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/f3e5f5/555?text=Design" alt="Project" width="100%" /></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x300/fff3e0/555?text=Mobile" alt="Project" width="100%" /></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container split">
+            <div class="social-media">
+                <h3>Sosial Media</h3>
+                <div class="circle-group">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Kontak</h3>
+                <p><strong>Whatsapp:</strong> 085119382203</p>
+                <p><strong>Email:</strong> juliasapnah65@gmail.com</p>
+                <p><strong>Alamat:</strong> Jl. Alisyahbana</p>
+            </div>
+        </div>
+        <div class="copyright">Copyright 2026 - Coding Camp Universitas Royal</div>
+    </footer>
+</body>
+</html>
